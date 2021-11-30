@@ -1,0 +1,141 @@
+
+body{
+    margin: 0px;
+}
+
+
+@mixin capaestandar {
+    border-radius: 40px;
+    background-color:rgba($color: #000000, $alpha: 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: all 800ms ease-in;
+}
+
+
+@mixin textostandar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    p{
+        text-align: center;
+    }
+
+} 
+
+
+
+.conteiner{
+    background-color: #16A085;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    .forma{
+        background-color: white;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 5% 10% 5% 10% / 5% 20% 5% 20%;
+       // animation-name: mover;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        figure{
+            border-radius: 40px;
+            position: relative;
+          
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            
+            img{
+                border-radius: 40px;
+                transition: all 500ms ease-in;
+            }
+           
+            #img4{
+             filter: blur(2px);
+            }
+
+
+            .capa.uno{
+                @include capaestandar();
+                @include textostandar();
+                
+              
+            }
+        
+            .capa.dos{
+                
+                @include capaestandar();
+                @include textostandar();
+                opacity: 0;
+               
+               
+            }
+            .capa.tres{
+                @include capaestandar();
+                @include textostandar();
+                opacity: 0;
+                
+            }
+        
+
+            .capa.cuatro{
+                filter: blur(50px);
+            }
+
+
+        }
+
+
+
+
+
+    }
+}
+
+.forma figure:hover > .capa.uno{
+  
+  transition: all 800ms ease-in;
+  transform: scale(0.7%);
+  
+}
+.forma figure:hover > .capa.dos{
+    opacity: 1;
+    transition: all 800ms ease-in;
+      
+  }
+
+.forma figure:hover > .capa.tres{
+    opacity: 1;
+    transition: all 800ms ease-in;
+    transform: scale(-100%);
+    transform: rotate(360deg);
+         
+  }
+
+.forma figure:hover #img4{
+    filter: blur(0px);
+}
+
+
+
+@keyframes mover{
+    
+    50%{
+        
+        border-radius: 10% 5% 10% 5% / 20% 5% 20% 5%;
+    }
+}

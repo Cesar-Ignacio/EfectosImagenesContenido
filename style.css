@@ -1,0 +1,194 @@
+body {
+  margin: 0px;
+}
+
+.conteiner {
+  background-color: #16A085;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0%;
+}
+
+.conteiner .forma {
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 5% 10% 5% 10% / 5% 20% 5% 20%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.conteiner .forma figure {
+  border-radius: 40px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.conteiner .forma figure img {
+  border-radius: 40px;
+  -webkit-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+}
+
+.conteiner .forma figure #img4 {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.conteiner .forma figure .capa.uno {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.conteiner .forma figure .capa.uno p {
+  text-align: center;
+}
+
+.conteiner .forma figure .capa.dos {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  opacity: 0;
+}
+
+.conteiner .forma figure .capa.dos p {
+  text-align: center;
+}
+
+.conteiner .forma figure .capa.tres {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  opacity: 0;
+}
+
+.conteiner .forma figure .capa.tres p {
+  text-align: center;
+}
+
+.conteiner .forma figure .capa.cuatro {
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+.forma figure:hover > .capa.uno {
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+  -webkit-transform: scale(0.7%);
+          transform: scale(0.7%);
+}
+
+.forma figure:hover > .capa.dos {
+  opacity: 1;
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+}
+
+.forma figure:hover > .capa.tres {
+  opacity: 1;
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+  -webkit-transform: scale(-100%);
+          transform: scale(-100%);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.forma figure:hover #img4 {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+@-webkit-keyframes mover {
+  50% {
+    border-radius: 10% 5% 10% 5% / 20% 5% 20% 5%;
+  }
+}
+
+@keyframes mover {
+  50% {
+    border-radius: 10% 5% 10% 5% / 20% 5% 20% 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
