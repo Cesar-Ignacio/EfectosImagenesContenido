@@ -4,11 +4,11 @@ body{
 }
 
 
-@mixin capaestandar {
+@mixin capaestandar($Vtrans,$wid,$hei){
     border-radius: 40px;
-    background-color:rgba($color: #000000, $alpha: 0.2);
-    width: 100%;
-    height: 100%;
+    background-color:rgba($color: #000, $alpha: $Vtrans);
+    width: $wid;
+    height: $hei;
     position: absolute;
     top: 0px;
     transition: all 800ms ease-in;
@@ -22,70 +22,92 @@ body{
     align-items: center;
     flex-direction: column;
     color: white;
+    h3{
+        margin: 0px;
+    }
     p{
         text-align: center;
+        margin: 0px;
     }
 
 } 
 
-
+.main{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
 
 .conteiner{
     background-color: #16A085;
-    min-height: 100vh;
+    width: 90%;
+    border-radius: 5%/15%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0%;
-    .forma{
-        background-color: white;
-        width: 100%;
-        min-height: 100vh;
-        border-radius: 5% 10% 5% 10% / 5% 20% 5% 20%;
-       // animation-name: mover;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
+    padding: 1%;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    .forma{
+        
+        background-color: #D1F2EB;
+    
+        width: 100%;
+        
+        border-radius: 5% 10% 5% 10% / 5% 20% 5% 20%;
+        animation-name: mover;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+            
+        animation-timing-function:ease;
+       
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: space-around;
         
         figure{
+
+
             border-radius: 40px;
             position: relative;
-          
+            
             width: 250px;
             height: 250px;
-            overflow: hidden;
+
+           // overflow: hidden;
             
+            display: flex;
+            justify-content: center;
+           
+            box-shadow:0px 30px 20px -15px #0097A7;
+            
+
             img{
                 border-radius: 40px;
                 transition: all 500ms ease-in;
+                width: auto;
+                height: auto;
+               
+           
             }
            
-            #img4{
-             filter: blur(2px);
-            }
-
+          
 
             .capa.uno{
-                @include capaestandar();
+                @include capaestandar(0.1,100%,100%);
                 @include textostandar();
-                
+
               
             }
         
             .capa.dos{
-                
-                @include capaestandar();
+               @include capaestandar(0.1,100%,100%);
                 @include textostandar();
                 opacity: 0;
-               
-               
             }
             .capa.tres{
-                @include capaestandar();
+                @include capaestandar(0.20,100%,100%);
                 @include textostandar();
                 opacity: 0;
                 
@@ -93,7 +115,12 @@ body{
         
 
             .capa.cuatro{
-                filter: blur(50px);
+                
+               @include capaestandar(0.2,20%,20%);
+                @include textostandar();
+                opacity: 0;
+                
+                 
             }
 
 
@@ -126,16 +153,26 @@ body{
          
   }
 
-.forma figure:hover #img4{
-    filter: blur(0px);
+.forma figure:hover >.capa.cuatro
+{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+   
 }
+  
 
 
 
 @keyframes mover{
     
+   
     50%{
         
         border-radius: 10% 5% 10% 5% / 20% 5% 20% 5%;
+        
+      
     }
+
+    
 }

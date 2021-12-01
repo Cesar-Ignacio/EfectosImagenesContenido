@@ -2,9 +2,26 @@ body {
   margin: 0px;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .conteiner {
   background-color: #16A085;
-  min-height: 100vh;
+  width: 90%;
+  border-radius: 5%/15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,27 +31,30 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0%;
+  padding: 1%;
 }
 
 .conteiner .forma {
-  background-color: white;
+  background-color: #D1F2EB;
   width: 100%;
-  min-height: 100vh;
   border-radius: 5% 10% 5% 10% / 5% 20% 5% 20%;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-name: mover;
+          animation-name: mover;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -44,23 +64,27 @@ body {
   position: relative;
   width: 250px;
   height: 250px;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 30px 20px -15px #0097A7;
+          box-shadow: 0px 30px 20px -15px #0097A7;
 }
 
 .conteiner .forma figure img {
   border-radius: 40px;
   -webkit-transition: all 500ms ease-in;
   transition: all 500ms ease-in;
-}
-
-.conteiner .forma figure #img4 {
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  width: auto;
+  height: auto;
 }
 
 .conteiner .forma figure .capa.uno {
   border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -83,13 +107,18 @@ body {
   color: white;
 }
 
+.conteiner .forma figure .capa.uno h3 {
+  margin: 0px;
+}
+
 .conteiner .forma figure .capa.uno p {
   text-align: center;
+  margin: 0px;
 }
 
 .conteiner .forma figure .capa.dos {
   border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -113,8 +142,13 @@ body {
   opacity: 0;
 }
 
+.conteiner .forma figure .capa.dos h3 {
+  margin: 0px;
+}
+
 .conteiner .forma figure .capa.dos p {
   text-align: center;
+  margin: 0px;
 }
 
 .conteiner .forma figure .capa.tres {
@@ -143,13 +177,48 @@ body {
   opacity: 0;
 }
 
+.conteiner .forma figure .capa.tres h3 {
+  margin: 0px;
+}
+
 .conteiner .forma figure .capa.tres p {
   text-align: center;
+  margin: 0px;
 }
 
 .conteiner .forma figure .capa.cuatro {
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: 0px;
+  -webkit-transition: all 800ms ease-in;
+  transition: all 800ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  opacity: 0;
+}
+
+.conteiner .forma figure .capa.cuatro h3 {
+  margin: 0px;
+}
+
+.conteiner .forma figure .capa.cuatro p {
+  text-align: center;
+  margin: 0px;
 }
 
 .forma figure:hover > .capa.uno {
@@ -175,9 +244,10 @@ body {
           transform: rotate(360deg);
 }
 
-.forma figure:hover #img4 {
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
+.forma figure:hover > .capa.cuatro {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
 }
 
 @-webkit-keyframes mover {
